@@ -1,0 +1,14 @@
+.breadcrumb>li+li:before {
+  color: #CCCCCC;
+  content: "|";
+  padding: 0 5px;
+}
+
+#preview {
+  width: 300px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  border-style: solid;
+  border-color: white;
+}
