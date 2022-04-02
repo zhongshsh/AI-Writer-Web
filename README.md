@@ -1,8 +1,10 @@
-# AI Writer
+# AI Writer Web
 
 
-使用 AI 实现文章续写。基于魔改的 GPT 模型，在不牺牲效果的前提下，将传统 GPT 模型的硬件门槛降低了1000倍，实现写作机器人的定制。 本项目基于 oneflow，集成了数据集、模型训练、模型部署，能通过已训练好的模型快速体验 AI 续写效果，也能通过微调模型、更改数据集等方式进行模型定制。 
+使用 AI 实现文章续写。项目基于魔改的 GPT 模型，在不牺牲效果的前提下，将传统 GPT 模型的硬件门槛降低了1000倍，实现写作机器人的定制。本项目为 AI Writer 的 Web 端，通过调用已训练好的模型快速体验 AI 续写效果。
 
+>- AI Writer 的 [Model 项目](https://www.oneflow.cloud/drill/#/project/public/code?id=95d6894ae425d4f8ecd8c3e998df2344)
+>- 参考项目 [BlinkDL/AI-Writer](https://github.com/BlinkDL/AI-Writer)
 
 ## 1. 效果示意
 ![web](https://oneflow-static.oss-cn-beijing.aliyuncs.com/ai_writer/web.gif)
@@ -58,13 +60,17 @@
 最后进入 `配置信息` 填写页，这一页内容比较重要，按如下方式填写。
 
 ```
-启动命令行：cd /workspace/AI-Writer && sh init.sh && python server.py
+启动命令行：sh init.sh && python server.py
 端口：5000
 其他：随意
 ```
 <img src="https://oneflow-static.oss-cn-beijing.aliyuncs.com/ai_writer/deployment.png" alt="deployment" style="zoom:50%;" />
 
-此时查看日志文件，可以看到模型运行产生的日志；点击 `测试` 或者直接复制 API，即可以访问到 AI Writer 的网页界面。该页面支持功能：
+此时查看日志文件，可以看到模型运行产生的日志。
+
+<img src="https://oneflow-static.oss-cn-beijing.aliyuncs.com/ai_writer/5-log.png" alt="deployment" style="zoom:50%;" />
+
+点击 `测试` 或者直接复制 API，即可以访问到 AI Writer 的网页界面。该页面支持功能：
 
 - 自定义续写长度 n （默认为10）
 - 续写：在用户输入的文本基础上进行长度为 n 的文本续写
